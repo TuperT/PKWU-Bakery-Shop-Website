@@ -1,0 +1,16 @@
+{
+    "review": {
+        "customer1": {
+            "name": "Willson Corneles",
+            "comment": "It was great! the Best cake I ever had! Will definitely order again soon. "
+        },
+        "customer2": {
+            "name": "Willson Bryan",
+            "comment": "Enak banget cihuy, gelo kue terbaik di dunia. "
+        },
+        "customer3": {
+            "name": "Nathan",
+            "comment": "Aku suka kue ini, kue ini sangat sangat enak. "
+        }
+    }
+}
