@@ -31,8 +31,8 @@ const HomeContent = () => {
             {/* Background wrapper - controls the red bg */}
             <div className="bg-[#fdefee] w-full pb-10">
                 
-                {/* Shop - no more absolute, just centered with margin */}
-                <div className="bg-[#fdf8f4] w-[90%] rounded-2xl mx-auto px-4 md:px-8 xl:px-10 py-10 md:py-15" id="item-shop">
+                {/* Shop  */}
+                <div className="bg-[#fdf8f4] w-[90%] rounded-2xl mx-auto -mt-10 md:-mt-16 px-4 md:px-8 xl:px-10 py-10 relative z-10" id="item-shop">
                     <div className="flex flex-row">
                         <div>
                             <p className="font-league text-5xl text-[#a6141f] font-bold">MENU</p>
