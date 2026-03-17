@@ -10,7 +10,9 @@ const FooterNavBar = () => {
     return (
         <footer>
             <div className="bg-red-50">
-                <div className="flex flex-row gap-20 bg-[#a6141f] w-full h-auto min-h-60 rounded-t-[4rem] py-8 px-10">
+                <div className="flex flex-col lg:flex-row lg:justify-between bg-[#a6141f] w-full h-auto rounded-t-[4rem] py-8 px-8 md:px-12 gap-8">
+                    
+                    {/* Title */}
                     <div id="Title" className="flex flex-col">
                         <p className="font-league text-white font-bold text-[3rem] leading-none">
                             BAKERY
@@ -23,7 +25,8 @@ const FooterNavBar = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-row gap-10 ml-[40%]">
+                    {/* Links */}
+                    <div className="flex flex-col sm:flex-row gap-8 md:gap-10 flex-wrap">
                         <div id="Quick Links" className="flex flex-col">
                             <p className="text-white font-bold font-league text-2xl mb-2">Quick Links</p>
                             <ul className="space-y-1">
@@ -45,32 +48,29 @@ const FooterNavBar = () => {
                         <div id="Contact Info" className="flex flex-col">
                             <p className="text-white font-bold font-league text-2xl mb-2">Contact us</p>
                             <p className="text-white font-league flex flex-row items-center gap-2 mt-1">
-                                <span><img src={LocationIcon} className="w-6 h-6" /></span> Jakarta, Indonesia
+                                <img src={LocationIcon} className="w-6 h-6" /> Jakarta, Indonesia
                             </p>
                             <p className="text-white font-league flex items-center gap-2 mt-1">
-                                <span><img src={CallIcon} className="w-6 h-6" /></span> +62 845-1297-62860
+                                <img src={CallIcon} className="w-6 h-6" /> +62 845-1297-62860
                             </p>
                             <p className="text-white font-league flex items-center gap-2">
-                                <span><img src={MailIcon} className="w-6 h-6" /></span> bakery@gmail.com
+                                <img src={MailIcon} className="w-6 h-6" /> bakery@gmail.com
                             </p>
-                            
+
                             {/* Social Media Icons */}
                             <div className="flex gap-3 mt-4">
                                 <Link to="https://tiktok.com" target="_blank" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
-                                    <img src={Tiktok} alt="YouTube" className="w-5 h-5" />
+                                    <img src={Tiktok} alt="Tiktok" className="w-5 h-5" />
                                 </Link>
-                                
                                 <Link to="https://instagram.com" target="_blank" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
                                     <img src={Instagram} alt="Instagram" className="w-5 h-5" />
                                 </Link>
-
                                 <Link to="https://facebook.com" target="_blank" className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-gray-200 transition">
                                     <img src={Facebook} alt="Facebook" className="w-5 h-5" />
                                 </Link>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
                 <div className="bg-[#cd646b] w-full h-12 flex items-center justify-center">
