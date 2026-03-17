@@ -8,14 +8,18 @@ import PromiseImage2 from "../assets/images/promise_image2.png"
 import Tiktok from "../assets/images/icons/tiktok.png"
 import Instagram from "../assets/images/icons/instagram.png"
 import Facebook from "../assets/images/icons/facebook.png"
+
 import ReviewData from "../data/Customer_Review.json"
+import CakeData from "../data/Products.json"
+
 import { InstagramEmbed } from "react-social-media-embed";
 import { useState } from "react";
 
 const HomeContent = () => {
     const reviews = Object.values(ReviewData.review)
-    const [currentIndex, setCurrentIndex] = useState(0)
+    const products = Object.values(CakeData.products)
 
+    const [currentIndex, setCurrentIndex] = useState(0)
     const prev = () => setCurrentIndex(i => (i - 1 + reviews.length) % reviews.length)
     const next = () => setCurrentIndex(i => (i + 1) % reviews.length)
 
@@ -48,11 +52,9 @@ const HomeContent = () => {
                     {/* Best seller product(5 product) */}
                     <div id="Best seller">
                         <div className="grid grid-cols-2 xl:grid-cols-5 mt-6 gap-2 xl:gap-0">
-                            <Product image={BestCake1} name="Rich Chocolate Truffle" price={50000} />
-                            <Product image={BestCake1} name="Rich Chocolate Truffle" price={50000} />
-                            <Product image={BestCake1} name="Rich Chocolate Truffle" price={50000} />
-                            <Product image={BestCake1} name="Rich Chocolate Truffle" price={50000} />
-                            <Product image={BestCake1} name="Rich Chocolate Truffle" price={50000} />
+                            {products.slice(0,5).map((cake, key) => (
+                                <Product key={key} image={cake.filePath} name={cake.cakeName} price={cake.price} />
+                            ))}
                         </div>
                         <button className="font-league font-extrabold text-[#fdf8f4] bg-[#a6141f] w-full xl:w-30 h-10 rounded-full xl:ml-[90%] mt-6 hover:cursor-pointer">
                             VIEW ALL
@@ -93,7 +95,7 @@ const HomeContent = () => {
                                 </div>
                             </div>
 
-                            <div className="p-4 rounded-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+                            <div className="p-4 rounded-xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-40">
                                 <div className="w-87.5 shrink-0">
                                     <InstagramEmbed 
                                     url="https://www.instagram.com/p/DVcrSJuEs2p/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" 

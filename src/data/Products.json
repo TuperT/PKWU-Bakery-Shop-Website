@@ -1,0 +1,29 @@
+{
+    "products": {
+        "product1": {
+            "filePath": "/images/best_cake1.png",
+            "cakeName": "Rich Chocolate Truffle",
+            "price": 50000
+        },
+        "product2": {
+            "filePath": "images/best_cake2.png",
+            "cakeName": "Supreme Deluxe Waffle",
+            "price": 75000
+        },
+        "product3": {
+            "filePath": "images/best_cake3.png",
+            "cakeName": "Blueberry Pancake",
+            "price": 65000
+        },
+        "product4": {
+            "filePath": "images/best_cake4.png",
+            "cakeName": "Tiramisu Family Plate",
+            "price": 150000
+        },
+        "product5": {
+            "filePath": "images/best_cake5.png",
+            "cakeName": "Oreo Luxury Cake",
+            "price": 250000
+        }
+    }
+}

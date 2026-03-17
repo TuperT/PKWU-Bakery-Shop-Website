@@ -1,6 +1,11 @@
 import CartSvg from "../../assets/svgs/cart-shopping-svgrepo-com2.svg"
 
 const Product = ({ image, name, price }) => {
+    const formatedPrice = new Intl.NumberFormat('id-ID', {
+        style: "currency",
+        currency: "IDR",
+    }).format(price)
+
     return (
         <div className="bg-white w-full max-w-45 sm:max-w-50 md:max-w-55 lg:max-w-60 rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
             <div className="p-2 sm:p-3 md:p-4">
@@ -13,7 +18,11 @@ const Product = ({ image, name, price }) => {
                 </div>
                 <div className="flex flex-col text-[#c4333e] font-league">
                     <p className="text-sm sm:text-base md:text-lg font-bold truncate">{name}</p>
-                    <p className="text-xs sm:text-sm md:text-base font-semibold mt-0.5">{price}</p>
+                    <p className="text-xs sm:text-sm md:text-base font-bold mt-0.5">{formatedPrice}</p>
+
+                    <div className="flex gap-1 text-yellow-400 text-xl">
+                        ★★★★★
+                    </div>
                 </div>
             </div>
             <div className="flex justify-end">

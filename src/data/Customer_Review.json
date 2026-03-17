@@ -11,6 +11,14 @@
         "customer3": {
             "name": "Nathan",
             "comment": "Aku suka kue ini, kue ini sangat sangat enak. "
+        },
+        "customer4": {
+            "name": "Jokowi Dodo",
+            "comment": "Saya bangga dengan kue buatan anak bangsa ini. "
+        },
+        "customer5": {
+            "name": "Arvel Liu",
+            "comment": "Mantap, yang namanya hidup penuh kepahitan, perlu diganti dengan kemanisan. "
         }
     }
 }
