@@ -11,10 +11,12 @@ import Facebook from "../assets/images/icons/facebook.png"
 import ReviewData from "../data/Customer_Review.json"
 import CakeData from "../data/Products.json"
 
+import { useNavigate } from "react-router";
 import { InstagramEmbed } from "react-social-media-embed";
 import { useState } from "react";
 
 const HomeContent = () => {
+    const Navigate = useNavigate()
     const reviews = Object.values(ReviewData.review)
     const products = Object.values(CakeData.products)
 
@@ -47,12 +49,15 @@ const HomeContent = () => {
 
                         {/* Best Seller Products */}
                         <div id="Best seller">
-                            <div className="grid grid-cols-2 xl:grid-cols-5 mt-6 gap-3">
+                            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 mt-6 gap-3">
                                 {products.slice(0, 5).map((cake, key) => (
                                     <Product key={key} image={cake.filePath} name={cake.cakeName} price={cake.price} />
                                 ))}
                             </div>
-                            <button className="font-league font-extrabold text-[#fdf8f4] bg-[#a6141f] w-full xl:w-30 h-10 rounded-full xl:ml-[90%] mt-6 hover:cursor-pointer">
+                            <button 
+                                className="font-league font-extrabold text-[#fdf8f4] bg-[#a6141f] w-full xl:w-30 h-10 rounded-full xl:ml-[90%] mt-6 hover:cursor-pointer"
+                                onClick={() => Navigate("/products")}
+                                >
                                 VIEW ALL
                             </button>
                         </div>
