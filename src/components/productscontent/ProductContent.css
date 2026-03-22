@@ -1,0 +1,45 @@
+.category-products-con {
+  display: flex;
+  gap: 3em;
+}
+
+.category h1 {
+  color: #8f171d;
+  font-size: 2.5em;
+  font-weight: bolder;
+  margin-bottom: 0.3em;
+}
+
+.category-pick-con {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.category-line {
+  background-color: #8f171d;
+  height: 9em;
+  width: 3px;
+}
+
+.line div {
+  color: #8f171d;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0.2em 0;
+}
+
+.products-con {
+  background-color: #ffb9b5;
+  border-radius: 15px;
+  padding: 1em;
+  display: grid;
+  width: 70em;
+  display: flex;
+  gap: 1em;
+  overflow-y: scroll;
+  min-height: 0;
+  flex-wrap: wrap;
+  max-height: 40em;
+}
